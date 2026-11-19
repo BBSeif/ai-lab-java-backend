@@ -12,3 +12,4 @@ plugins {
 
 rootProject.name = 'AiProject'
 include('app')
+// rootProject.name = 'products-api'

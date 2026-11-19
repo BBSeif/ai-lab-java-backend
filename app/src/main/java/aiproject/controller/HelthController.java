@@ -1,4 +1,4 @@
-package aiproject;
+package aiproject.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +11,7 @@ public class HelthController {
     
     @GetMapping("health")
     public String healthCheck() {
-        return "OK";
+        return " OK ";
     }
 
     
