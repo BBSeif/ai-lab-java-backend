@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import aiproject.entity.Product;
 import aiproject.repository.ProductRepository;
-import jakarta.validation.Valid;
 
 @Service
 public class ProductService {
@@ -34,7 +33,7 @@ public class ProductService {
         return productRepository.findById(id)
                 .map(product -> {
                     product.setName(updatedProduct.getName());
-                    product.setDescription(updatedProduct.getDescription());
+                    product.setCategory(updatedProduct.getCategory());
                     product.setPrice(updatedProduct.getPrice());
                     return productRepository.save(product);
                 })
@@ -58,9 +57,5 @@ public class ProductService {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'updateProduct'");
     }
-
-
-
-    
 
 }
